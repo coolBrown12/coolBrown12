@@ -1,0 +1,24 @@
+class Solution {
+public:
+    Node* connect(Node* root) {
+        Node*newroot=root;
+        while(root!=NULL){
+            Node*dummy=new Node(0);
+            Node*temp=dummy;
+            while(root!=NULL){
+                if(root->left){
+                    dummy->next=root->left;
+                    dummy=dummy->next;
+                }
+                if(root->right){
+                    dummy->next=root->right;
+                    dummy=dummy->next;
+                }
+                root=root->next;
+            }
+            root=temp->next;
+        }
+        return root;
+
+    }
+};
