@@ -18,7 +18,7 @@ public:
             }
             root=temp->next;
         }
-        return root;
+        return newroot;
 
     }
 };
